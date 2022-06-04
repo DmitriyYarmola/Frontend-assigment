@@ -7,10 +7,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  extends: [
-    'airbnb',
-    'airbnb/hooks',
-  ],
+  extends: ['airbnb', 'airbnb/hooks'],
   plugins: ['import'],
   settings: {
     'import/resolver': {
@@ -22,7 +19,6 @@ module.exports = {
     'key-spacing': 'off',
     'jsx-quotes': [2, 'prefer-double'],
     'max-len': [2, 120, 2],
-    'object-curly-spacing': [2, 'never'],
     'comma-dangle': [
       1,
       {
@@ -35,8 +31,8 @@ module.exports = {
     ],
     'react/react-in-jsx-scope': 'off',
     'no-multiple-empty-lines': 'error',
-    'react/jsx-filename-extension': [1, {extensions: ['.jsx', '.tsx']}],
-    'no-unused-vars': ['error', {args: 'after-used'}],
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
+    'no-unused-vars': ['error', { args: 'after-used' }],
     'import/extensions': ['warn', 'never'],
     'arrow-parens': 'off',
     'react/function-component-definition': 'off',
@@ -45,6 +41,16 @@ module.exports = {
     'no-shadow': 'warn',
     'consistent-return': 'off',
     'react/require-default-props': 'off',
-    z,
+    indent: 'off',
+    'object-curly-newline': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        labelComponents: ['CustomInputLabel'],
+        labelAttributes: ['label'],
+        controlComponents: ['CustomInput'],
+        depth: 3,
+      },
+    ],
   },
 }
